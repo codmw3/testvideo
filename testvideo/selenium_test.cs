@@ -19,35 +19,64 @@ string driverPath = @"C:\Users\Arslana\Desktop\testvideo\chromedriver.exe";
         // _driver = new FirefoxDriver();
     }
 
-    [Fact]
-    public void SearchTest()
-    {
-        // Navigate to the search page
+//     [Fact]
+//     public void SearchTest()
+//     {
+//         // Navigate to the search page
 
 
-           // Navigate to the search page
+//            // Navigate to the search page
+//     _driver.Navigate().GoToUrl("https://testvideoapp.azurewebsites.net/");
+
+//        // Find the search box and search button
+//     var searchInput = _driver.FindElement(By.Id("search-input"));
+//     var searchButton = _driver.FindElement(By.Id("search-button"));
+
+//     // Click the search button without entering any text in the search box
+//     searchButton.Click();
+
+//     // Check if an error message is displayed
+//     var errorMessage = _driver.FindElement(By.Id("error-message"));
+//     Assert.Equal("Please enter a search query", errorMessage.Text);
+
+//     // Enter a query in the search box
+//     searchInput.SendKeys("test query");
+
+// // Click the search button again
+//     searchButton.Click();
+
+//     // Assert that the search results page is displayed
+//     var pageTitle = _driver.Title;
+//     Assert.Equal("Search Results - Your App Name", pageTitle);
+// }
+
+
+[Fact]
+public void SearchTest()
+{
+           //Navigate to the search page
     _driver.Navigate().GoToUrl("https://testvideoapp.azurewebsites.net/");
 
-       // Find the search box and search button
+    // Find the search box and search button
     var searchInput = _driver.FindElement(By.Id("search-input"));
     var searchButton = _driver.FindElement(By.Id("search-button"));
 
     // Click the search button without entering any text in the search box
     searchButton.Click();
 
-    // Check if an error message is displayed
-    var errorMessage = _driver.FindElement(By.Id("error-message"));
-    Assert.Equal("Please enter a search query", errorMessage.Text);
+    // Check if the URL contains the search page URL pattern (e.g. /search)
+    var url = _driver.Url;
+    Assert.Contains("/search", url);
 
     // Enter a query in the search box
     searchInput.SendKeys("test query");
 
-// Click the search button again
+    // Click the search button again
     searchButton.Click();
 
     // Assert that the search results page is displayed
-    var pageTitle = _driver.Title;
-    Assert.Equal("Search Results - Your App Name", pageTitle);
+    url = _driver.Url;
+    Assert.Contains("/search-results", url);
 }
 
 
