@@ -1,10 +1,23 @@
-﻿@page
+@page
+
+@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment WebHostEnvironment
+
+@{
+    var environmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "abc";
+}
+
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    var currentEnvironment = ViewData["environment"] as string;
 }
 
+@Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    
+
+<b><p> The current environmentt is @environmentName.</p></b>
+
 </div>
