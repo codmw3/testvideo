@@ -60,22 +60,3 @@ jobs:
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0A51303B87C14E5F8918DB63F6EA391E }}
           package: .
 
-      - task: PowerShell@2
-         inputs:
-        targetType: 'inline'
-      script: |
-        # Run your desired commands here
-        $logs = Get-Content -Path 'path/to/your/logs.txt'
-         Write-Host 'Logs:'
-         Write-Host $logs
-
-        # Send the output of the script via email
-        Write-Host 'Sending email...'
-        Send-MailMessage -To 'your-recipient-email-address@example.com' -From 'your-email-address@example.com' -Subject 'Cron job output' -Body "Hello, world!`n`n$logs" -SmtpServer 'smtp.office365.com' -UseSsl -Port 587 -Credential (Get-Credential)
-  displayName: 'Run cron job'
-    
-    
-    
-env:
-  TZ: 'UTC'
-  schedule: '0 */10 * * *'
