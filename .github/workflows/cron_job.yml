@@ -1,24 +1,30 @@
-trigger:
-- main
+# File: .github/workflows/cron_job.yml
 
-pool:
-  vmImage: 'windows-latest'
+name: Cron Job
 
-steps:
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Run your desired commands here
-      $logs = Get-Content -Path 'path/to/your/logs.txt'
-      Write-Host 'Logs:'
-      Write-Host $logs
+on:
+  schedule:
+    - cron: '0 */5 * * *'
 
-      # Send the output of the script via email
-      Write-Host 'Sending email...'
-      Send-MailMessage -To 'arslanmanzoor332@gmail.com' -From 'arslanmanzoor332@gmail.com' -Subject 'Cron job output' -Body "Hello, world!`n`n$logs" -SmtpServer 'smtp.office365.com' -UseSsl -Port 587 -Credential (Get-Credential)
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-  displayName: 'Run cron job'
-  env:
-    TZ: 'UTC'
-  schedule: '0 */10 * * *'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Generate logs
+        run: echo "This is a log message" >> logs.txt
+
+      - name: Send email
+        uses: dawidd6/action-send-mail@v2.2.0
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Logs for testvideoapp"
+          body: "Attached are the logs for testvideoapp"
+          to: "arslanmanzoor332@gmail.com"
+          attachments: "logs.txt"
