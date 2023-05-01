@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "K7dp4Ogu4CFQUjEXl9Se+kmTmslTx9UedM8+iadNGPJzHwd1CYg4p0XUgKJIFb4YWFd7W/ruueVkHkdQeeBqWw==",
+  "dgSpecHash": "gLeaxjKjm39WKFAucrEnwry23NnjQTqZUYIqvlHJDdtgNW4JxRfLvm5OBirbv0TmI/hZpJepLAbP7O38kB9AEg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Arslana\\Desktop\\testvideo\\testvideo\\testvideo.csproj",
   "expectedPackageFiles": [
@@ -62,6 +62,7 @@
     "C:\\Users\\Arslana\\.nuget\\packages\\system.runtime.handles\\4.3.0\\system.runtime.handles.4.3.0.nupkg.sha512",
     "C:\\Users\\Arslana\\.nuget\\packages\\system.runtime.interopservices\\4.3.0\\system.runtime.interopservices.4.3.0.nupkg.sha512",
     "C:\\Users\\Arslana\\.nuget\\packages\\system.runtime.interopservices.runtimeinformation\\4.3.0\\system.runtime.interopservices.runtimeinformation.4.3.0.nupkg.sha512",
+    "C:\\Users\\Arslana\\.nuget\\packages\\system.runtime.loader\\4.0.0\\system.runtime.loader.4.0.0.nupkg.sha512",
     "C:\\Users\\Arslana\\.nuget\\packages\\system.runtime.numerics\\4.3.0\\system.runtime.numerics.4.3.0.nupkg.sha512",
     "C:\\Users\\Arslana\\.nuget\\packages\\system.security.cryptography.algorithms\\4.3.0\\system.security.cryptography.algorithms.4.3.0.nupkg.sha512",
     "C:\\Users\\Arslana\\.nuget\\packages\\system.security.cryptography.cng\\4.3.0\\system.security.cryptography.cng.4.3.0.nupkg.sha512",
@@ -85,7 +86,9 @@
     "C:\\Users\\Arslana\\.nuget\\packages\\xunit.assert\\2.4.2\\xunit.assert.2.4.2.nupkg.sha512",
     "C:\\Users\\Arslana\\.nuget\\packages\\xunit.core\\2.4.2\\xunit.core.2.4.2.nupkg.sha512",
     "C:\\Users\\Arslana\\.nuget\\packages\\xunit.extensibility.core\\2.4.2\\xunit.extensibility.core.2.4.2.nupkg.sha512",
-    "C:\\Users\\Arslana\\.nuget\\packages\\xunit.extensibility.execution\\2.4.2\\xunit.extensibility.execution.2.4.2.nupkg.sha512"
+    "C:\\Users\\Arslana\\.nuget\\packages\\xunit.extensibility.execution\\2.4.2\\xunit.extensibility.execution.2.4.2.nupkg.sha512",
+    "C:\\Users\\Arslana\\.nuget\\packages\\xunit.runner.reporters\\2.4.2\\xunit.runner.reporters.2.4.2.nupkg.sha512",
+    "C:\\Users\\Arslana\\.nuget\\packages\\xunit.runner.utility\\2.4.2\\xunit.runner.utility.2.4.2.nupkg.sha512"
   ],
   "logs": []
 }

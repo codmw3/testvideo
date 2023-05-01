@@ -923,6 +923,22 @@
           }
         }
       },
+      "System.Runtime.Loader/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.1.0",
+          "System.Reflection": "4.1.0",
+          "System.Runtime": "4.1.0"
+        },
+        "compile": {
+          "ref/netstandard1.5/System.Runtime.Loader.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.5/System.Runtime.Loader.dll": {}
+        }
+      },
       "System.Runtime.Numerics/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1397,6 +1413,37 @@
         },
         "runtime": {
           "lib/netstandard1.1/xunit.execution.dotnet.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "xunit.runner.reporters/2.4.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "xunit.runner.utility": "[2.4.2]"
+        },
+        "compile": {
+          "lib/netcoreapp1.0/xunit.runner.reporters.netcoreapp10.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp1.0/xunit.runner.reporters.netcoreapp10.dll": {}
+        }
+      },
+      "xunit.runner.utility/2.4.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "System.Runtime.Loader": "4.0.0",
+          "xunit.abstractions": "2.0.3"
+        },
+        "compile": {
+          "lib/netcoreapp1.0/xunit.runner.utility.netcoreapp10.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp1.0/xunit.runner.utility.netcoreapp10.dll": {
             "related": ".xml"
           }
         }
@@ -3852,6 +3899,32 @@
         "system.runtime.interopservices.runtimeinformation.nuspec"
       ]
     },
+    "System.Runtime.Loader/4.0.0": {
+      "sha512": "4UN78GOVU/mbDFcXkEWtetJT/sJ0yic2gGk1HSlSpWI0TDf421xnrZTDZnwNBapk1GQeYN7U1lTj/aQB1by6ow==",
+      "type": "package",
+      "path": "system.runtime.loader/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/net462/_._",
+        "lib/netstandard1.5/System.Runtime.Loader.dll",
+        "ref/netstandard1.5/System.Runtime.Loader.dll",
+        "ref/netstandard1.5/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/de/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/es/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/fr/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/it/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/ja/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/ko/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/ru/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/zh-hans/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/zh-hant/System.Runtime.Loader.xml",
+        "system.runtime.loader.4.0.0.nupkg.sha512",
+        "system.runtime.loader.nuspec"
+      ]
+    },
     "System.Runtime.Numerics/4.3.0": {
       "sha512": "yMH+MfdzHjy17l2KESnPiF2dwq7T+xLnSJar7slyimAkUh/gTrS9/UQOtv7xarskJ2/XDSNvfLGOBQPjL7PaHQ==",
       "type": "package",
@@ -4835,12 +4908,54 @@
         "xunit.extensibility.execution.2.4.2.nupkg.sha512",
         "xunit.extensibility.execution.nuspec"
       ]
+    },
+    "xunit.runner.reporters/2.4.2": {
+      "sha512": "VtJeno+LePwPtRO+NYN3GUy1ZiXu95G6uWnOdGMdCCp9kkEVBDyMYbr/h1t23tK/xQ4vDPi7XhUCIZ6cOX8TOw==",
+      "type": "package",
+      "path": "xunit.runner.reporters/2.4.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "_content/logo-128-transparent.png",
+        "lib/net452/xunit.runner.reporters.net452.dll",
+        "lib/netcoreapp1.0/xunit.runner.reporters.netcoreapp10.dll",
+        "lib/netstandard1.1/xunit.runner.reporters.netstandard11.dll",
+        "lib/netstandard1.5/xunit.runner.reporters.netstandard15.dll",
+        "xunit.runner.reporters.2.4.2.nupkg.sha512",
+        "xunit.runner.reporters.nuspec"
+      ]
+    },
+    "xunit.runner.utility/2.4.2": {
+      "sha512": "5f3JayTAq5FcsOhIkgrD26MBlg2Xfh4rJjkYRGG5wgJ6a+sWB+ex22UDzuc6rL1kVVghiaupwmr2A3s+CbG4Aw==",
+      "type": "package",
+      "path": "xunit.runner.utility/2.4.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "_content/logo-128-transparent.png",
+        "lib/net35/xunit.runner.utility.net35.dll",
+        "lib/net35/xunit.runner.utility.net35.xml",
+        "lib/net452/xunit.runner.utility.net452.dll",
+        "lib/net452/xunit.runner.utility.net452.xml",
+        "lib/netcoreapp1.0/xunit.runner.utility.netcoreapp10.dll",
+        "lib/netcoreapp1.0/xunit.runner.utility.netcoreapp10.xml",
+        "lib/netstandard1.1/xunit.runner.utility.netstandard11.dll",
+        "lib/netstandard1.1/xunit.runner.utility.netstandard11.xml",
+        "lib/netstandard1.5/xunit.runner.utility.netstandard15.dll",
+        "lib/netstandard1.5/xunit.runner.utility.netstandard15.xml",
+        "lib/uap10.0/xunit.runner.utility.uwp10.dll",
+        "lib/uap10.0/xunit.runner.utility.uwp10.pri",
+        "lib/uap10.0/xunit.runner.utility.uwp10.xml",
+        "xunit.runner.utility.2.4.2.nupkg.sha512",
+        "xunit.runner.utility.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Selenium.WebDriver >= 4.9.0",
-      "Xunit >= 2.4.2"
+      "Xunit >= 2.4.2",
+      "Xunit.Runner.Reporters >= 2.4.2"
     ]
   },
   "packageFolders": {
@@ -4885,6 +5000,10 @@
             "version": "[4.9.0, )"
           },
           "Xunit": {
+            "target": "Package",
+            "version": "[2.4.2, )"
+          },
+          "Xunit.Runner.Reporters": {
             "target": "Package",
             "version": "[2.4.2, )"
           }

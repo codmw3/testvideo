@@ -23,25 +23,32 @@ string driverPath = @"C:\Users\Arslana\Desktop\testvideo\chromedriver.exe";
     public void SearchTest()
     {
         // Navigate to the search page
-        _driver.Navigate().GoToUrl("https://testvideoapp.azurewebsites.net/");
 
-        // Find the search box and enter a query
-        var searchInput = _driver.FindElement(By.Id("search-input"));
-        searchInput.SendKeys("test query");
 
-        // Find the search button and click it
-        var searchButton = _driver.FindElement(By.Id("search-button"));
-        searchButton.Click();
+           // Navigate to the search page
+    _driver.Navigate().GoToUrl("https://testvideoapp.azurewebsites.net/");
 
-        // Assert that the search results page is displayed
-        var pageTitle = _driver.Title;
-        Assert.Equal("Search Results - Your App Name", pageTitle);
-    }
+       // Find the search box and search button
+    var searchInput = _driver.FindElement(By.Id("search-input"));
+    var searchButton = _driver.FindElement(By.Id("search-button"));
 
-    public void Dispose()
-    {
-        // Quit the driver and release all associated resources
-        _driver.Quit();
-        _driver.Dispose();
-    }
+    // Click the search button without entering any text in the search box
+    searchButton.Click();
+
+    // Check if an error message is displayed
+    var errorMessage = _driver.FindElement(By.Id("error-message"));
+    Assert.Equal("Please enter a search query", errorMessage.Text);
+
+    // Enter a query in the search box
+    searchInput.SendKeys("test query");
+
+// Click the search button again
+    searchButton.Click();
+
+    // Assert that the search results page is displayed
+    var pageTitle = _driver.Title;
+    Assert.Equal("Search Results - Your App Name", pageTitle);
+}
+
+
 }

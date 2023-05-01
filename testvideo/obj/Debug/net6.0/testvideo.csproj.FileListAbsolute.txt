@@ -1,0 +1,8 @@
+C:\Users\Arslana\Desktop\testvideo\testvideo\obj\Debug\net6.0\testvideo.csproj.AssemblyReference.cache
+C:\Users\Arslana\Desktop\testvideo\testvideo\obj\Debug\net6.0\testvideo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Arslana\Desktop\testvideo\testvideo\obj\Debug\net6.0\testvideo.AssemblyInfoInputs.cache
+C:\Users\Arslana\Desktop\testvideo\testvideo\obj\Debug\net6.0\testvideo.AssemblyInfo.cs
+C:\Users\Arslana\Desktop\testvideo\testvideo\obj\Debug\net6.0\testvideo.csproj.CoreCompileInputs.cache
+C:\Users\Arslana\Desktop\testvideo\testvideo\obj\Debug\net6.0\testvideo.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Arslana\Desktop\testvideo\testvideo\obj\Debug\net6.0\testvideo.RazorAssemblyInfo.cache
+C:\Users\Arslana\Desktop\testvideo\testvideo\obj\Debug\net6.0\testvideo.RazorAssemblyInfo.cs

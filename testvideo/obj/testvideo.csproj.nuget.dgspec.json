@@ -45,6 +45,10 @@
             "Xunit": {
               "target": "Package",
               "version": "[2.4.2, )"
+            },
+            "Xunit.Runner.Reporters": {
+              "target": "Package",
+              "version": "[2.4.2, )"
             }
           },
           "imports": [
