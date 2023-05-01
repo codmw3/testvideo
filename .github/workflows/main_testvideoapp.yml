@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build_DEV:
     runs-on: windows-latest
 
     steps:
@@ -38,9 +38,9 @@ jobs:
           name: .net-app
           path: ${{env.DOTNET_ROOT}}/myapp
 
-  deploy:
+  deploy_DEV:
     runs-on: windows-latest
-    needs: build
+    needs: build_DEV
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
