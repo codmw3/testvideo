@@ -22,7 +22,7 @@ jobs:
         uses: dawidd6/action-send-mail@v2.2.0
         with:
           from: arslanmanzoor332@gmail.com  # Replace with your email address
-          to: 35593@students.riphah.edu.pk  # Replace with your recipient's email address
+          to: 35593@students.riphah.edu.pk,sadafuzair12@gmail.com  # Replace with your recipient's email address
           subject: Test email
           body: Test email body
           server_address: smtp.gmail.com
