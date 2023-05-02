@@ -4,7 +4,7 @@ name: Cron Job
 
 on:
   schedule:
-    - cron: '0 */5 * * *'
+    - cron: '*/5 * * * *'
 
 jobs:
   build:
@@ -24,8 +24,8 @@ jobs:
           to: 35593@students.riphah.edu.pk  # Replace with your recipient's email address
           subject: Test email
           body: Test email body
-          smtp_server: smtp.gmail.com
-          smtp_port: 587
-          smtp_username: ${{ secrets.EMAIL_USERNAME }}
-          smtp_password: ${{ secrets.EMAIL_PASSWORD }}
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
           attachments: logs.txt  # Optional attachment
