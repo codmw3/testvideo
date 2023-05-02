@@ -27,11 +27,22 @@
 		<button type="submit" id="search-button">Search</button>
 	</form>
 
- if (search-input.Text == "")
-    {
-        // If the search box is empty, display an error message and return
-        <h1>Error: Search box is empty</h1>
-        return;
-    }
+         var searchInput = _driver.FindElement(By.Id("search-input"));
+        var searchButton = _driver.FindElement(By.Id("search-button"));
+
+        searchInput.Clear();
+
+        searchButton.Click();
+
+        try
+        {
+            var alert = _driver.SwitchTo().Alert();
+            Assert.Equal("Please enter a search query", alert.Text);
+            alert.Accept();
+        }
+        catch (NoAlertPresentException)
+        {
+            Assert.True(false, "No alert was displayed.");
+        }
 
 </div>
